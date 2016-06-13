@@ -1,0 +1,16 @@
+-- HUMANS --
+
+Daniel Pape
+yonderapps.com
+
+-- SITE --
+
+Last update: 11/06/2016 - "Hello World!"
+Standards: HTML5, CSS3
+Software: Atom, Filezilla, Sketch
+Hardware: Apple MacBook Pro
+
+-- FONTS --
+
+Cabin
+https://www.google.com/fonts/specimen/Cabin
