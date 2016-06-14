@@ -521,8 +521,8 @@ label {
 	background:white;
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
-	transition: -webkit-transform .5s linear 0s;
-	transition: transform .5s linear 0s;
+	transition: -webkit-transform .3s linear 0s;
+	transition: transform .3s linear 0s;
   box-shadow: 0 5px 15px 0 rgba(0,0,0,0.25);
   min-height: 330px;
   width:330px;
@@ -535,16 +535,16 @@ label {
 	background: white;
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
-	transition: -webkit-transform .5s linear 0s;
-	transition: transform .5s linear 0s;
+	transition: -webkit-transform .3s linear 0s;
+	transition: transform .3s linear 0s;
   box-shadow: 0 5px 15px 0 rgba(0,0,0,0.25);
   min-height: 330px;
   width:330px;
 }
-.flipCard:hover > .front{
-	transform: perspective( 600px ) rotateY( -180deg );
+.flipCard.flip .front{
+	transform: perspective( 600px ) rotateY( -180deg);
 }
-.flipCard:hover > .back{
+.flipCard.flip .back{
 	transform: perspective( 600px ) rotateY( 0deg );
 }
 
@@ -708,6 +708,12 @@ h1
   src: local('Cabin Bold'), local('Cabin-Bold'), url(https://fonts.gstatic.com/s/cabin/v8/haOjnueK8Or1ztuuRtr8dnYhjbSpvc47ee6xR_80Hnw.woff) format('woff');
 }
       </style>
+      <script>
+      function showBack(card){
+      document.querySelector(card).classList.toggle('flip');
+      console.log("flipped");
+      }
+      </script>
    </head>
    <body>
      <div class="card">
@@ -718,7 +724,7 @@ h1
           <div id="contactButton"><a href="mailto:danielwpape@gmail.com?subject=Yonder%20Apps">CONTACT</a></div>
         </div>
      </div>
-     <div class="flipCard">
+     <div class="flipCard" id="card1">
        <div class="front">
             <img class="appIcon" src="/img/eve175.jpeg">
             <h2 class="appName">EVE ALARM</h2>
@@ -727,14 +733,14 @@ h1
             </div>
             <p class="appDescription">Eve Alarm is an alarm that reminds you to go to bed so you get a restful night's sleep.</p>
             <div class="downloadButton"><a href="https://itunes.apple.com/gb/app/eve-alarm-time-to-sleep/id633081958?mt=8">DOWNLOAD</a></div>
-            <div class="moreInfoButton"><a href="https://itunes.apple.com/gb/app/copywriter/id670760844?mt=8">MORE INFO</a></div>
+            <div class="moreInfoButton" onclick="showBack('#card1')"><a>MORE INFO</a></div>
           </div>
           <div class="back">
             <p class="appDescription">More info about the app</p>
           </div>
       </div>
     </div>
-      <div class="flipCard">
+      <div class="flipCard" id="card2">
         <div class="front">
             <img class="appIcon" src="/img/cop175.png">
             <h2 class="appName">COPYWRITER</h2>
@@ -743,13 +749,13 @@ h1
             </div>
             <p class="appDescription">CopyWriter is a thesauris with a marketing brain, to allow copywriters to write copy with a consistent tone of voice.</p>
             <div class="downloadButton"><a href="https://itunes.apple.com/gb/app/copywriter/id670760844?mt=8">DOWNLOAD</a></div>
-            <div class="moreInfoButton"><a href="https://itunes.apple.com/gb/app/copywriter/id670760844?mt=8">MORE INFO</a></div>
+            <div class="moreInfoButton" onclick="showBack('#card2')"><a>MORE INFO</a></div>
           </div>
           <div class="back">
             <p class="appDescription">More info about the app</p>
           </div>
       </div>
-      <div class="flipCard">
+      <div class="flipCard" id="card3">
         <div class="front">
             <img class="appIcon" src="/img/na175.jpeg">
             <h2 class="appName">EVE NAP TIMER</h2>
@@ -758,13 +764,13 @@ h1
             </div>
             <p class="appDescription">Eve Nap Timer is an simple timer app with an intuitive sunset based user interface.</p>
             <div class="downloadButton"><a href="https://itunes.apple.com/ca/app/eve-alarm-power-nap/id789920975?mt=8">DOWNLOAD</a></div>
-            <div class="moreInfoButton"><a href="https://itunes.apple.com/gb/app/copywriter/id670760844?mt=8">MORE INFO</a></div>
+            <div class="moreInfoButton" onclick="showBack('#card3')"><a>MORE INFO</a></div>
         </div>
           <div class="back">
             <p class="appDescription">More info about the app</p>
           </div>
       </div>
-      <div class="flipCard">
+      <div class="flipCard" id="card4">
         <div class="front">
             <img class="appIcon" src="/img/map175.jpeg">
             <h2 class="appName">MAPGROUNDS</h2>
@@ -773,7 +779,7 @@ h1
             </div>
             <p class="appDescription">Mapgrounds is an app to make beautiful wallpapers for your phone using maps of the places mean the most.</p>
             <div class="downloadButton"><a href="https://itunes.apple.com/gb/app/mapgrounds/id792151906?mt=8">DOWNLOAD</a></div>
-            <div class="moreInfoButton"><a href="https://itunes.apple.com/gb/app/copywriter/id670760844?mt=8">MORE INFO</a></div>
+            <div class="moreInfoButton" onclick="showBack('#card4')"><a>MORE INFO</a></div>
           </div>
           <div class="back">
             <p class="appDescription">More info about the app</p>
